@@ -1,0 +1,96 @@
+* {                 /*  [ '*' applies to the whole code,which means the css used for '*' will apply to the whole webpage  ]   */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* there are two types of box-sizing --> 1). content-box & 2). border-box. 
+   content-box--> isme box ke dimensions set karne ke baad jo bhi margin or padding add karenge woh box ke dimensions se extra honge.
+   border-box-->  isme box ke dimensions set karne ke baad jo bhi margin or padding add karenge woh box ke dimensions mein hi include honge.*/
+}
+
+body {
+  min-height: 100vh; /* vh stands for viewport height(1 vh is equal to 1% height of the viewport) */
+  background: #efeff2;
+  display: flex; /* places the css in a container type */
+  justify-content: center; /* align the container horizontally */
+  align-items: center; /* align the container vertically */
+}
+
+.calculator {
+  width: 300px;
+  height: 500px;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3); /* box shadow is used for adding shadow to the outer box of the container */
+  border-radius: 12px;
+  background: #22252d;
+  overflow: hidden;
+  /* overflow decides how the box should behave if the content in the box is more than the dimensions of the box,
+    Types of overflows:-
+
+    overflow: visible; --> If content exceeds the container's dimensions, it will be displayed outside of it.
+
+    overflow: hidden;  --> If any content that extends beyond the container's boundaries is effectively hidden from view.
+
+    overflow: scroll;  -->   Scrollbars are displayed even if the content doesn't exceed the container's dimensions, but they appear disabled if not needed.
+
+    overflow: auto;    --> Scrollbars are added to the container only if the content overflows. If the content fits within the container, no scrollbars are displayed.
+
+    overflow-x: visible; --> These values are less common and allow you to control overflow in only the horizontal (overflow-x) or vertical (overflow-y) direction, while keeping the other axis unaffected.
+
+    overflow-y: visible; --> These values are less common and allow you to control overflow in only the horizontal (overflow-x) or vertical (overflow-y) direction, while keeping the other axis unaffected. */
+}
+
+form input {
+  width: 100%;
+  height: 150px;
+  border: none;
+  border-radius: 12px;
+  font-size: 2rem; /* 1rem is equivalent to 16 pixels in most cases when no specific font size is defined for the root element. */
+  padding: 1rem;
+  color: #fff;
+  background: #000;
+  text-align: right; /* aligns the text to the right side so that when we give input, the text starts typing from the right */
+  pointer-events: none; /* no pointer events allowed so that we cant input whatever we want through keyboard */
+}
+
+.buttons {
+  display: flex; /* displays the content as a container box */
+  flex-wrap: wrap; /* places the buttons all over the container (wraps up the container) */
+  justify-content: space-between ; /* align the container horizontally(here it aligns the buttons giving them space evenly between them) */
+  padding: 20px;
+}
+
+button {
+  flex: 0 0 22%;
+  margin: 5px 0;
+  border: 1px ;
+  width: 60px;
+  height: 54px;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 13px;
+  cursor: pointer; /* determines which type of cursor should be visible when hovering over a certain element  */
+}
+
+.btn-yellow {
+  background: #CA6F1E;
+  /* color: #fff; */
+}
+
+.btn-grey {
+  background: #515A5A;
+}
+
+.btn-equal {
+  background: #1A5276;
+}
+
+.btn-clear {
+  background: #1A5276;
+}
+
+.btn-sqrt {
+  background: #795548;
+}
+
+.btn-crt {
+  background: #795548;
+}
